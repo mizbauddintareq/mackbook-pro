@@ -1,4 +1,4 @@
-// memory
+//Extra memory
 document.getElementById('memory-8gb').addEventListener('click', function(){
     const memoryPrice = document.getElementById('memory-price');
     memoryPrice.innerText = 0;
@@ -9,10 +9,9 @@ document.getElementById('memory-16gb').addEventListener('click', function(){
     const memoryPrice = document.getElementById('memory-price');
     memoryPrice.innerText = 180;
     total();
+});  
 
-});
-
-// Storage
+//Extra Storage
 document.getElementById('storage-256gb').addEventListener('click', function(){
     const storagePrice = document.getElementById('storage-price');
     storagePrice.innerText = 0;
@@ -32,7 +31,7 @@ document.getElementById('storage-1tb').addEventListener('click', function(){
 
 });
 
-// delivery
+//Delivery Cost
 document.getElementById('free-delivery').addEventListener('click', function(){
     const deliveryCost = document.getElementById('delivery-cost');
     deliveryCost.innerText = 0;
@@ -62,7 +61,7 @@ function total (){
     updateTotal.innerText = totalPriceSum;
 };
 
-// prom code and update total
+// promo code and update total
 document.getElementById('discount-btn').addEventListener('click', function(){
     promoCode()
 });
@@ -76,9 +75,9 @@ function promoCode (){
        const discountPrice = parseFloat (totalPrice) *20 /100;
        const totalDiscount = parseFloat (totalPrice) - discountPrice;
        const updateTotal = document.getElementById('update-total');
-       updateTotal.innerText = totalDiscount;   
-    }
-    promoCodeInput.value = '';
+       updateTotal.innerText = totalDiscount;  
+       promoCodeInput.value = ''; 
+    }   
 };
 
 
